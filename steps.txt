@@ -1,0 +1,28 @@
+I have implemented 
+http://127.0.0.1:3000/api/v1/prices/latest-price
+
+Used redis and api authentication.
+if data comes from the redis then reponse will be like
+{
+    "fromCache": true,
+    "data": {
+        "price": 27155.79,
+        "timeAt": 1679200920218
+    }
+}
+else
+
+{
+    "fromCache": false,
+    "data": {
+        "price": 27155.79,
+        "timeAt": 1679200920218
+    }
+}
+
+authentication token fetch  please used this url 
+    http://127.0.0.1:3000/api/v1/auth/create-toekn
+
+and then pass this token as bearer token in api.
+http://127.0.0.1:3000/api/v1/prices/latest-price
+
